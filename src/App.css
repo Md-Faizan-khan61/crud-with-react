@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+h1,h2 {
+  font-family: "Playfair Display", serif;
+}
+.row {
+  width: 50%;
+}
+.grid {
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap:30px;
+}
+/* ---------------Left-content----------------- */
+
+.home {
+  display:flex;
+}
+.left-content,
+.right-content {
+  width:50%;
+}
+.content {
+  padding:30px;
+}
+.left-content{
+  height: 100vh;
+  position:fixed;
+  top:0;
+  overflow: hidden;
+  color:aliceblue;
+}
+.Cover img {
+  position:absolute;
+  left:0%;
+  top:0%;
+  height:110vh !important;
+  z-index: -1;
+}
+.left-content .logo {
+  width: 70px;
+  height:50px;
+  line-height: 50px;
+  color:#000;
+  background-color: #fff;
+  text-transform: capitalize;
+}
+.logo h1{
+  font-size: 23px;
+  text-align: center;
+}
+.left-content .text{
+  width:50%;
+  margin-top: 14%;
+}
+.left-content .text h2{
+  font-size: 30px;
+  line-height:30px ;
+}
+.left-content .text p {
+ margin:10px 0px 3px 0px
+}
+.left-content .text-2 {
+  float : right;
+  text-align: right;
+}
+
+/* ---------------Right-content----------------- */
+.right-content{
+  padding:30px;
+  color:black;
+  position:absolute;
+  right:0;
+}
+
+.img{
+  overflow: hidden;
+  transition: 0.5s;
+}
+img {
+  transition: 0.5s;
+}
+.img img:hover{
+  transform:scale(1.1)
+}
+
+@media only screen and (max-width: 768px) {
+  .home {
+    
+    flex-direction: column;
+  }
+  .left-content,
+  .right-content {
+    width:100%;
+    position:relative;
+  }
+  .left-content{
+    position:relative; 
+  }
+}
